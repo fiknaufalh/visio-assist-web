@@ -33,7 +33,7 @@ const Modal: React.FC<ModalProps> = ({ message, onClose }) => {
 
 const HomePage = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyAYk9tiWwajvCMeYVnUgg4VZjfMH9SZl7o',
+    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY || "AIzaSyBsfee8YepGnw-0QGhWSFmXniudcCkMsvU",
   });
 
   const [center, setCenter] = useState(defaultCenter);
